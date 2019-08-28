@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using AutoMapper;
+using DevInterviewCodeTest.Services.Services;
+using DevInterviewCodeTest.Services.Services.Interfaces;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -17,6 +20,8 @@ namespace DevInterviewCodeTest
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAutoMapper(GetType().Assembly, GetType().Assembly);
+            services.AddScoped<IHandService, HandService>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 

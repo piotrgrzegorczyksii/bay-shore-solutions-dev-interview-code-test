@@ -1,12 +1,12 @@
-﻿using DevInterviewCodeTest.Web.Models;
-using DevInterviewCodeTest.Web.Models.Enums;
+﻿using DevInterviewCodeTest.Services.Models.Enums;
+using DevInterviewCodeTest.Web.Models;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 
 namespace DevInterviewCodeTest.Web.TagHelpers
 {
     public class CardSuitTagHelper : TagHelper
     {
-        public Card Card { get; set; }
+        public CardModel Card { get; set; }
 
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {

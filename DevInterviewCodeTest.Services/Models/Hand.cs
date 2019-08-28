@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using DevInterviewCodeTest.Web.Models.Enums;
+using DevInterviewCodeTest.Services.Models.Enums;
 
-namespace DevInterviewCodeTest.Web.Models
+namespace DevInterviewCodeTest.Services.Models
 {
     public class Hand
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
+using DevInterviewCodeTest.Services.Models.Enums;
 using DevInterviewCodeTest.Web.Models;
-using DevInterviewCodeTest.Web.Models.Enums;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace DevInterviewCodeTest.Web.Helpers.Html
@@ -13,14 +13,14 @@ namespace DevInterviewCodeTest.Web.Helpers.Html
             return new ExtensionPoint<IHtmlHelper>(target);
         }
 
-        public static string CardRank(this ExtensionPoint<IHtmlHelper> instance, Card card)
+        public static string CardRank(this ExtensionPoint<IHtmlHelper> instance, CardModel card)
         {
             return (int)card.Rank <= 10
                 ? ((int)card.Rank).ToString()
                 : Enum.GetName(typeof(CardRankEnum), card.Rank).FirstOrDefault().ToString();
         }
 
-        public static string HandEvaluation(this ExtensionPoint<IHtmlHelper> instance, Hand hand)
+        public static string HandEvaluation(this ExtensionPoint<IHtmlHelper> instance, HandModel hand)
         {
             var content = "High card";
 
@@ -55,7 +55,7 @@ namespace DevInterviewCodeTest.Web.Helpers.Html
             return content;
         }
 
-        private static string GetPairLiteral(Hand hand)
+        private static string GetPairLiteral(HandModel hand)
         {
             var rank = (int)hand.Cards.GroupBy(c => c.Rank).OrderByDescending(g => g.Count()).First().First().Rank;
             if (rank == 2)

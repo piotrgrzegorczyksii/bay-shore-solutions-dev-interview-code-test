@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using DevInterviewCodeTest.Web.Models.Enums;
+using DevInterviewCodeTest.Services.Models.Enums;
 
-namespace DevInterviewCodeTest.Web.Models
+namespace DevInterviewCodeTest.Services.Models
 {
     public class Deck
     {
@@ -32,10 +32,10 @@ namespace DevInterviewCodeTest.Web.Models
         public Hand GetHand()
         {
             Shuffle();
-            return new Hand(Cards.Take(5).ToArray());
+            return new Hand(Cards.Take(5));
         }
 
-        public void Shuffle()
+        private void Shuffle()
         {
             var n = Cards.Length;
             var random = new Random();

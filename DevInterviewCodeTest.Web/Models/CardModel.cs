@@ -1,8 +1,8 @@
-﻿using DevInterviewCodeTest.Web.Models.Enums;
+﻿using DevInterviewCodeTest.Services.Models.Enums;
 
 namespace DevInterviewCodeTest.Web.Models
 {
-    public class Card
+    public class CardModel
     {
         public CardRankEnum Rank { get; set; }
         public CardSuitEnum Suit { get; set; }

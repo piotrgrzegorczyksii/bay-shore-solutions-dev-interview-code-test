@@ -1,5 +1,5 @@
 ﻿using System.Linq;
-using DevInterviewCodeTest.Web.Models;
+using DevInterviewCodeTest.Services.Models;
 using Xunit;
 
 namespace DevInterviewCodeTest.Tests

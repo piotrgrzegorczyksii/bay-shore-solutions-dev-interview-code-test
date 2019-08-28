@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
-using DevInterviewCodeTest.Web.Models;
-using DevInterviewCodeTest.Web.Models.Enums;
+using DevInterviewCodeTest.Services.Models;
+using DevInterviewCodeTest.Services.Models.Enums;
 using Xunit;
 
 namespace DevInterviewCodeTest.Tests

@@ -1,4 +1,4 @@
-﻿namespace DevInterviewCodeTest.Web.Models.Enums
+﻿namespace DevInterviewCodeTest.Services.Models.Enums
 {
     public enum CardRankEnum
     {
