@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Hand>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Hands:</h1>
+
+<dl>
+    @foreach (var hand in Model)
+    {
+        <dt>
+            @foreach (var card in hand.Cards)
+            {
+                <span>
+                    <span>@Html.DevInterviewCodeTest().CardRank(card)</span><card-suit card="card"></card-suit>
+                </span>
+            }
+        </dt>
+        <dd>
+            @Html.DevInterviewCodeTest().HandEvaluation(hand)
+        </dd>
+    }
+</dl>
